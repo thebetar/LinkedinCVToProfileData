@@ -1,5 +1,7 @@
 {
   "name": "David Bruschke",
+  "firstName": "David",
+  "lastName": "Bruschke",
   "email": "david.bruschke@gmail.com",
   "phone": "",
   "skills": [
@@ -8,8 +10,14 @@
     "Machine Learning"
   ],
   "languages": [
-    "Engels",
-    "Nederlands"
+    {
+      "name": "english",
+      "level": "ProfessionalWorking"
+    },
+    {
+      "name": "dutch",
+      "level": "ProfessionalWorking"
+    }
   ],
   "certifications": [
     "HAVO"
@@ -36,7 +44,17 @@
   ],
   "education": [
     {
-      "institution": "De Haagse Hogeschool / The Hague University of Applied Sciences"
+      "institution": "De Haagse Hogeschool / The Hague University of Applied Sciences",
+      "title": "Bachelor's degree, Informatica (Software engineering) / Hogere opleiding Software engineer",
+      "yearFinished": 2021
+    },
+    {
+      "institution": "De Haagse Hogeschool / The Hague University of Applied Sciences",
+      "title": "Propedeuse Jaar, HBO - ICT",
+      "yearFinished": 2018
+    },
+    {
+      "institution": "Fioretti College Lisse"
     }
   ]
 }

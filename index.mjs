@@ -2,8 +2,13 @@ import fs from 'fs';
 import PDFParser from 'pdf2json';
 
 import validator from './validator.mjs';
+import locations from './data/locations.mjs';
+import languages from './data/languages.mjs';
+import languageLevels from './data/languageLevels.mjs';
 
 const pdfParser = new PDFParser();
+
+const isDev = true;
 
 function parseValueToString(value) {
 	return decodeURIComponent(value?.R?.[0]?.T || '');
@@ -11,6 +16,11 @@ function parseValueToString(value) {
 
 pdfParser.on('pdfParser_dataError', errData => console.error(errData.parserError));
 pdfParser.on('pdfParser_dataReady', pdfData => {
+	if (isDev) {
+		// For debug purposes
+		fs.writeFileSync('preview/data.json', JSON.stringify(pdfData, null, 2));
+	}
+
 	const result = {};
 
 	result.name = decodeURIComponent(
@@ -19,7 +29,10 @@ pdfParser.on('pdfParser_dataReady', pdfData => {
 		).R[0].T
 	);
 
-	const leftRow = pdfData.Pages[0].Texts.filter(item => Number(item.x) === 1.1);
+	result.firstName = result.name.split(' ')[0];
+	result.lastName = result.name.split(' ').pop();
+
+	const leftRow = pdfData.Pages[0].Texts.filter(item => Number(item.x) >= 1.1 && Number(item.x) <= 10);
 	const rightRow = pdfData.Pages.reduce((acc, page, index) => {
 		return [...acc, ...page.Texts.filter(item => Number(item.x) >= 13.723).map(item => ({ ...item, index }))];
 	}, []);
@@ -31,12 +44,44 @@ pdfParser.on('pdfParser_dataReady', pdfData => {
 	const languageY = leftRow.find(item => item.R[0].T.includes('Languages')).y;
 	const certificationY = leftRow.find(item => item.R[0].T.includes('Certifications')).y;
 
-	result.skills = leftRow.filter(item => item.y > skillY && item.y < languageY).map(parseValueToString);
-	result.languages = leftRow.filter(item => item.y > languageY && item.y < certificationY).map(parseValueToString);
+	result.skills = leftRow
+		.filter(item => item.y > skillY && item.y < languageY)
+		.map(item => ({ title: parseValueToString(item), years: '1' }));
+	result.languages = leftRow
+		.filter(item => item.y > languageY && item.y < certificationY)
+		.map(parseValueToString)
+		.reduce((acc, item) => {
+			if (!item.includes('(') && !item.includes(')')) {
+				acc.push({ name: languages[item] || item });
+			} else {
+				const language = acc.pop();
+				acc.push({
+					...language,
+					level: languageLevels[item] || 'ProfessionalWorking'
+				});
+			}
+			return acc;
+		}, []);
 	result.certifications = leftRow.filter(item => item.y > certificationY).map(parseValueToString);
 
+	const description = rightRow.find(item => item.R[0].T.includes('Samenvatting'));
 	const workExperience = rightRow.find(item => item.R[0].T.includes('Ervaring'));
 	const education = rightRow.find(item => item.R[0].T.includes('Opleiding'));
+
+	result.address = {
+		city: parseValueToString(
+			rightRow
+				.filter(item => item.y > 3.35 && item.y < description.y && item.index === 0)
+				.find(item =>
+					locations.some(
+						location =>
+							location.label.toLowerCase() === parseValueToString(item).trim().split(',')[0].toLowerCase()
+					)
+				)
+		),
+		postalCode: '',
+		streetAddress: ''
+	};
 
 	const initialReduceObject = () => ({
 		timesAgoAdded: 0,
@@ -92,7 +137,7 @@ pdfParser.on('pdfParser_dataReady', pdfData => {
 		}
 
 		if (acc.string && acc.timesAgoAdded === 0) {
-			const title = acc.string.split('·')[0];
+			const title = acc.string.split('·')[0].trim();
 			const yearFinished = Number(acc.string.split('-').pop().replace(')', '').trim());
 			acc.items[acc.items.length - 2] = {
 				...acc.items[acc.items.length - 2],
@@ -108,17 +153,17 @@ pdfParser.on('pdfParser_dataReady', pdfData => {
 
 	if (workExperience.index === education.index) {
 		// If work experience and education are on the same page then we can just filter between the two
-		result.workExperience = rightRow
+		result.experience = rightRow
 			.filter(item => item.index >= workExperience.index && item.y > workExperience.y && item.y < education.y)
 			.reduce(reduceWorkExperience, initialReduceObject()).items;
 	} else {
 		// If work experience and education are on different pages then we need to filter between the two
-		result.workExperience = rightRow
+		result.experience = rightRow
 			.filter(
 				item =>
-					(item.index === workExperience.index && item.y > workExperience.y) ||
+					(item.index === workExperience.index && item.y > workExperience.y && item.y <= 47) ||
 					(item.index === education.index && item.y < education.y) ||
-					(item.index > workExperience.index && item.index < education.index)
+					(item.index > workExperience.index && item.index < education.index && item.y <= 47)
 			)
 			.reduce(reduceWorkExperience, initialReduceObject()).items;
 	}
@@ -127,9 +172,26 @@ pdfParser.on('pdfParser_dataReady', pdfData => {
 		.filter(
 			item =>
 				((item.index === education.index && item.y > education.y) || item.index > education.index) &&
-				index.y >= 47
+				item.y <= 47
 		)
 		.reduce(reduceEducation, initialReduceObject()).items;
+
+	if (
+		result.education.some(item => item.title.toLowerCase().includes('master')) ||
+		result.education.some(item => item.institution.toLowerCase().includes('universiteit'))
+	) {
+		result.educationLevel = 'WO';
+	} else if (
+		result.education.some(item => item.title.toLowerCase().includes('bachelor')) ||
+		result.education.some(item => item.institution.toLowerCase().includes('hogeschool'))
+	) {
+		result.educationLevel = 'HBO';
+	} else if (
+		result.education.some(item => item.title.toLowerCase().includes('mbo')) ||
+		result.education.some(item => item.institution.toLowerCase().includes('mbo'))
+	) {
+		result.educationLevel = 'MBO';
+	}
 
 	fs.writeFileSync(`result/result-${result.name}.json`, JSON.stringify(result, null, 2));
 });
