@@ -7,5 +7,15 @@ export default {
 	Spaans: 'spanish',
 	Portugees: 'portuguese',
 	Pools: 'polish',
-	Russisch: 'russian'
+	Russisch: 'russian',
+
+	Dutch: 'dutch',
+	English: 'english',
+	French: 'french',
+	German: 'german',
+	Italian: 'italian',
+	Spanish: 'spanish',
+	Portuguese: 'portuguese',
+	Polish: 'polish',
+	Russian: 'russian'
 };

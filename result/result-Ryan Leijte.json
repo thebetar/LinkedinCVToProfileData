@@ -1,0 +1,94 @@
+{
+  "name": "Ryan Leijte",
+  "firstName": "Ryan",
+  "lastName": "Leijte",
+  "email": "ryanleijte@gmail.com",
+  "phone": "",
+  "skills": [
+    {
+      "title": "Social Ads",
+      "years": "1"
+    },
+    {
+      "title": "Search Engine Advertising",
+      "years": "1"
+    },
+    {
+      "title": "E-mailmarketing",
+      "years": "1"
+    }
+  ],
+  "languages": [],
+  "certifications": [
+    "Cambridge Business English",
+    "Qualifications C2 Proficient"
+  ],
+  "address": {
+    "city": "Amsterdam",
+    "postalCode": "",
+    "streetAddress": ""
+  },
+  "experience": [
+    {
+      "company": "Chary ",
+      "title": "Founder & Paid Ads Marketeer",
+      "yearStart": 2019,
+      "yearEnd": "Present"
+    },
+    {
+      "company": "Raystretto",
+      "title": "Coffee Consultant ",
+      "yearStart": 2018,
+      "yearEnd": "Present"
+    },
+    {
+      "company": "Barista Trainer",
+      "title": "augustus 2018 - Present ",
+      "yearStart": null,
+      "yearEnd": "Present"
+    },
+    {
+      "company": "Hilton",
+      "title": "Duty Manager",
+      "yearStart": 2018,
+      "yearEnd": 2019
+    },
+    {
+      "company": "SQPeople",
+      "title": "Sales & Marketing ",
+      "yearStart": 2016,
+      "yearEnd": 2018
+    },
+    {
+      "company": "Park Hotel Group",
+      "title": "Management Traineeship",
+      "yearStart": 2017,
+      "yearEnd": 2018
+    },
+    {
+      "company": "Hilton Hotels & Resorts",
+      "title": "Front Office Traineeship",
+      "yearStart": 2016,
+      "yearEnd": 2017
+    },
+    {
+      "company": "Grand Hotel Amrâth Amsterdam",
+      "title": "F&B Management Traineeship",
+      "yearStart": 2015,
+      "yearEnd": 2016
+    }
+  ],
+  "education": [
+    {
+      "institution": "Hotelschool The Hague",
+      "title": "Bachelor of Business Administration - BBA",
+      "yearFinished": null
+    },
+    {
+      "institution": "Vituscollege",
+      "title": "Havo",
+      "yearFinished": null
+    }
+  ],
+  "educationalLevel": "HBO"
+}

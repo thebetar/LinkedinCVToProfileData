@@ -5,9 +5,18 @@
   "email": "david.bruschke@gmail.com",
   "phone": "",
   "skills": [
-    "TensorFlow",
-    "Transfer Learning",
-    "Machine Learning"
+    {
+      "title": "TensorFlow",
+      "years": "1"
+    },
+    {
+      "title": "Transfer Learning",
+      "years": "1"
+    },
+    {
+      "title": "Machine Learning",
+      "years": "1"
+    }
   ],
   "languages": [
     {
@@ -16,13 +25,18 @@
     },
     {
       "name": "dutch",
-      "level": "ProfessionalWorking"
+      "level": "Native"
     }
   ],
   "certifications": [
     "HAVO"
   ],
-  "workExperience": [
+  "address": {
+    "city": "Hillegom",
+    "postalCode": "",
+    "streetAddress": ""
+  },
+  "experience": [
     {
       "company": "Quintor",
       "title": "ICT-consultant",
@@ -54,7 +68,10 @@
       "yearFinished": 2018
     },
     {
-      "institution": "Fioretti College Lisse"
+      "institution": "Fioretti College Lisse",
+      "title": "HAVO, Hoger algemeen voortgezet onderwijs (Havo)",
+      "yearFinished": 2017
     }
-  ]
+  ],
+  "educationalLevel": "HBO"
 }

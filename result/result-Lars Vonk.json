@@ -1,15 +1,32 @@
 {
   "name": "Lars Vonk",
+  "firstName": "Lars",
+  "lastName": "Vonk",
   "email": "larserikvonk@ziggo.nl",
   "phone": "0639119996",
   "skills": [
-    "JavaScript",
-    "Vue.js",
-    "CSS"
+    {
+      "title": "JavaScript",
+      "years": "1"
+    },
+    {
+      "title": "Vue.js",
+      "years": "1"
+    },
+    {
+      "title": "CSS",
+      "years": "1"
+    }
   ],
   "languages": [
-    "Nederlands",
-    "Engels"
+    {
+      "name": "dutch",
+      "level": "Native"
+    },
+    {
+      "name": "english",
+      "level": "FullProfessional"
+    }
   ],
   "certifications": [
     "Learn DevOps: CI/CD with Jenkins",
@@ -20,7 +37,12 @@
     "Nuxt.js - Vue.js on Steroids",
     "HAVO"
   ],
-  "workExperience": [
+  "address": {
+    "city": "Amsterdam",
+    "postalCode": "",
+    "streetAddress": ""
+  },
+  "experience": [
     {
       "company": "ING",
       "title": "Product Owner",
@@ -49,6 +71,12 @@
       "company": "Dutse",
       "title": "Mede-oprichter",
       "yearStart": 2020,
+      "yearEnd": 2021
+    },
+    {
+      "company": "INNOVATIVE CYCLING PRODUCTS LIMITED",
+      "title": "Webontwikkelaar",
+      "yearStart": 2018,
       "yearEnd": 2021
     },
     {
@@ -89,9 +117,19 @@
     },
     {
       "company": "Nettorama",
-      "title": "Medewerker AGF",
-      "yearStart": 2016,
-      "yearEnd": 2017
+      "title": "Medewerker AGF"
+    },
+    {
+      "company": "november 2016 - mei 2017 ",
+      "title": "Bussum"
     }
-  ]
+  ],
+  "education": [
+    {
+      "institution": "Windesheim Flevoland",
+      "title": "Bachelor's degree, HBO-ICT",
+      "yearFinished": 2020
+    }
+  ],
+  "educationalLevel": "HBO"
 }

@@ -1,0 +1,54 @@
+{
+  "name": "Vasil Garnev",
+  "firstName": "Vasil",
+  "lastName": "Garnev",
+  "email": "",
+  "phone": "",
+  "skills": [
+    {
+      "title": "Enterprise Resource Planning (ERP)",
+      "years": "1"
+    },
+    {
+      "title": "International Logistics",
+      "years": "1"
+    },
+    {
+      "title": "Fast-Moving Consumer Goods",
+      "years": "1"
+    },
+    {
+      "title": "(FMCG)",
+      "years": "1"
+    }
+  ],
+  "languages": [],
+  "certifications": [],
+  "address": {
+    "city": "",
+    "postalCode": "",
+    "streetAddress": ""
+  },
+  "experience": [
+    {
+      "company": "Tony's Chocolonely",
+      "title": "Internal Customer Service (Logistics Coordinator)",
+      "yearStart": 2022,
+      "yearEnd": 2023
+    },
+    {
+      "company": "Study Association FOCUS",
+      "title": "Chairperson of Events Committee",
+      "yearStart": 2019,
+      "yearEnd": 2021
+    }
+  ],
+  "education": [
+    {
+      "institution": "De Haagse Hogeschool / The Hague University of Applied Sciences",
+      "title": "International Business, General Sales, Merchandising and Related Marketing Operations",
+      "yearFinished": 2022
+    }
+  ],
+  "educationalLevel": "HBO"
+}
