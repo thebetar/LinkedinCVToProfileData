@@ -1,0 +1,97 @@
+{
+  "name": "Lars Vonk",
+  "email": "larserikvonk@ziggo.nl",
+  "phone": "0639119996",
+  "skills": [
+    "JavaScript",
+    "Vue.js",
+    "CSS"
+  ],
+  "languages": [
+    "Nederlands",
+    "Engels"
+  ],
+  "certifications": [
+    "Learn DevOps: CI/CD with Jenkins",
+    "using Pipelines and Docker",
+    "NestJS Zero to Hero - Modern",
+    "Typescript Back-end Development",
+    "Diploma computertypen",
+    "Nuxt.js - Vue.js on Steroids",
+    "HAVO"
+  ],
+  "workExperience": [
+    {
+      "company": "ING",
+      "title": "Product Owner",
+      "yearStart": 2022,
+      "yearEnd": "Present"
+    },
+    {
+      "company": "Quintor",
+      "title": "Consultant",
+      "yearStart": 2020,
+      "yearEnd": "Present"
+    },
+    {
+      "company": "Vonk Programming",
+      "title": "Owner",
+      "yearStart": 2019,
+      "yearEnd": "Present"
+    },
+    {
+      "company": "SVB Sociale Verzekeringsbank",
+      "title": "Software Engineer",
+      "yearStart": 2021,
+      "yearEnd": 2022
+    },
+    {
+      "company": "Dutse",
+      "title": "Mede-oprichter",
+      "yearStart": 2020,
+      "yearEnd": 2021
+    },
+    {
+      "company": "Kojac CV",
+      "title": "Ontwikkelaar",
+      "yearStart": 2018,
+      "yearEnd": 2020
+    },
+    {
+      "company": "MedSpace van MedWeb",
+      "title": "Junior Software Developer",
+      "yearStart": 2019,
+      "yearEnd": 2020
+    },
+    {
+      "company": "BedrijfsUitjesPlannen",
+      "title": "Mede-eigenaar",
+      "yearStart": 2019,
+      "yearEnd": 2019
+    },
+    {
+      "company": "Gemeente Almere",
+      "title": "Intern",
+      "yearStart": 2018,
+      "yearEnd": 2019
+    },
+    {
+      "company": "Sanoma",
+      "title": "Stagair",
+      "yearStart": 2017,
+      "yearEnd": 2018
+    },
+    {
+      "company": "Studentaanhuis",
+      "title": "Computerhulp",
+      "yearStart": 2017,
+      "yearEnd": 2018
+    },
+    {
+      "company": "Nettorama",
+      "title": "Medewerker AGF",
+      "yearStart": 2016,
+      "yearEnd": 2017
+    }
+  ]
+}

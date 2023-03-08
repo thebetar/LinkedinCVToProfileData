@@ -1,0 +1,16 @@
+{
+	"name": "linkedincvtoprofile",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.mjs"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"pdf-parse": "^1.1.1",
+		"pdf2json": "^3.0.3"
+	}
+}

@@ -1,0 +1,42 @@
+{
+  "name": "David Bruschke",
+  "email": "david.bruschke@gmail.com",
+  "phone": "",
+  "skills": [
+    "TensorFlow",
+    "Transfer Learning",
+    "Machine Learning"
+  ],
+  "languages": [
+    "Engels",
+    "Nederlands"
+  ],
+  "certifications": [
+    "HAVO"
+  ],
+  "workExperience": [
+    {
+      "company": "Quintor",
+      "title": "ICT-consultant",
+      "yearStart": 2021,
+      "yearEnd": "Present"
+    },
+    {
+      "company": "SyncVR Medical",
+      "title": "Student Internship",
+      "yearStart": 2021,
+      "yearEnd": 2021
+    },
+    {
+      "company": "Result! Data.ai",
+      "title": "Internship",
+      "yearStart": 2019,
+      "yearEnd": 2020
+    }
+  ],
+  "education": [
+    {
+      "institution": "De Haagse Hogeschool / The Hague University of Applied Sciences"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+
+
+  
+Contactgegevens
+david.bruschke@gmail.com
+www.linkedin.com/in/
+davidbruschke (LinkedIn)
+Belangrijkste vaardigheden
+TensorFlow
+Transfer Learning
+Machine Learning
+Languages
+Engels (Professional Working)
+Nederlands (Native or Bilingual)
+Certifications
+HAVO
+David Bruschke
+C# / .NET Environment, specialized in Unity3D and Game
+Development.
+Hillegom, Zuid-Holland, Nederland
+Samenvatting
+Graduated from the HBO-ICT in Zoetermeer. .NET is my primary
+programming ecosystem, since it's the core component for Unity, the
+game engine I'm most familiar with. 
+From Software Engineering I branched off to Game Development
+and became familiar with many different techniques and methods to
+develop games from the ground up.
+Ervaring
+Quintor
+ICT-consultant
+november 2021 - Present (1 jaar 5 maanden)
+Den Haag, Zuid-Holland, Nederland
+SyncVR Medical
+Student Internship
+februari 2021 - juli 2021 (6 maanden)
+Utrecht, Nederland
+Developing a tool to connect Bluetooth Low Energy wearables to Virtual
+Reality headsets used by SyncVR.
+Result! Data.ai
+Internship
+juni 2019 - februari 2020 (9 maanden)
+Zoetermeer
+Creating an API for a Flutter application to access and write data to a SQL
+Database in Azure.
+Writing a separate app in Flutter that uses a Tensor Flow Lite model that's
+trained via transfer-learning to recognize mile markers on the side of a road.
+ 
+Page 1 of 2
+
+  
+Opleiding
+De Haagse Hogeschool / The Hague University of Applied Sciences
+Bachelor's degree, Informatica (Software engineering) / Hogere opleiding
+Software engineer · (2018 - 2021)
+De Haagse Hogeschool / The Hague University of Applied Sciences
+Propedeuse Jaar, HBO - ICT · (2017 - 2018)
+Fioretti College Lisse
+HAVO, Hoger algemeen voortgezet onderwijs (Havo) · (2012 - 2017)
+ 
+Page 2 of 2
