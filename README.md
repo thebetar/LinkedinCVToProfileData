@@ -4,4 +4,4 @@ For a project I am currently working on I have to create some software to read L
 
 ### Be aware
 
-This code only currently works for resumes in Dutch from the Netherlands
+This project is still a W.I.P. if you have any suggestions or find a bug please make an `issue` or a `pull request` and I will review it.
